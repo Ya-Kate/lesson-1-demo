@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class HomeWorkPart1 {
     public static void main (String[] args) {
+        /*
+        Написать программу для вывода времени года по номеру месяца.
+ Должно быть 2 варианта реализации: switch-case и if-else-if
+         */
         System.out.println("№1");
         System.out.println("Print number month");
         Scanner scanner = new Scanner(System.in);
@@ -87,35 +91,38 @@ public class HomeWorkPart1 {
             System.out.println("No this month");
         }
 
-
-        System.out.println("--");
+        /*
+        Напишите программу, которая будет принимать на вход число (можно задать явно в коде)
+        и на выход будет выводить сообщение о четности числа.
+         */
         System.out.println("№2");
         System.out.println("Print number");
         number = scanner.nextInt() % 2;
         String print = number == 0 ? "четное" : "не четное";
         System.out.println(print);
 
-
-        System.out.println("--");
+        /*
+        Для числа t (температура на улице) вывести:
+- Если t > 15, то вывести «Тепло»
+- Если t <= 15 и t > -5, то вывести «Нормально»
+- Если t <= 5, то вывести «Холодно»
+         */
         System.out.println("№3");
         System.out.println("Print 't' outside");
         int t = scanner.nextInt();
-        boolean peremen = true;
-        while (peremen){
             if (t > 15){
                 System.out.println("Тепло");
             }
-            if (t <= 15 && t > -5) {
-                System.out.println("Нормально");
-            }
-            if (t <= -5) {
+            else if (t <= -5) {
                 System.out.println("Холодно");
             }
-            peremen = false;
-        }
+            else  {
+                System.out.println("Нормально");
+            }
 
-
-        System.out.println("--");
+        /*
+        По введенному (можно задать явно) номеру определить цвет радуги (1 – красный, 4 – зеленый и т.д.)
+         */
         System.out.println("№4");
         System.out.println("Print number rainbow");
         number = scanner.nextInt();

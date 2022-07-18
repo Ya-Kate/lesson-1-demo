@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 public class HomeWorkPart3 {
     public static void main(String[] args) {
+        /*
+        Выведите на экран первый 11 членов последовательности Фибоначчи
+         */
         System.out.println("№1");
         int one =1;
         int two =1;
@@ -17,6 +20,12 @@ public class HomeWorkPart3 {
             System.out.print(three + " ");
         }
 
+        /*
+        За каждый месяц банк начисляет к сумме вклада 7% от суммы. Напишите программу, в которую
+пользователь вводит сумму вклада и количество месяцев. А банк вычисляет конечную сумму вклада
+с учетом начисления процентов за каждый месяц. Для вычисления суммы с учетом процентов
+используйте цикл for.
+         */
         System.out.println("\n");
         System.out.println("№2");
         Scanner scanner = new Scanner(System.in);
@@ -31,6 +40,9 @@ public class HomeWorkPart3 {
         String result = String.format("%.2f",itogSum);
         System.out.print(result);
 
+        /*
+        Напишите программу, которая выводит в консоль таблицу умножения.
+         */
         System.out.println("--\n");
         System.out.println("№3");
         System.out.println(" Таблица Умножения:");
