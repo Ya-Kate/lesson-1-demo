@@ -8,8 +8,7 @@ public class HomeWorkPart2 {
         При помощи цикла for вывести на экран нечетные числа от 1 до 99. (использовать инкремент)
          */
         System.out.println("№1");
-        int number = 0;
-        for (;number <= 99; number++ ) {
+        for ( int number = 0; number <= 99; number++ ) {
             if (number %2 != 0) {
                 System.out.print(number + " ");
             }
@@ -19,8 +18,9 @@ public class HomeWorkPart2 {
         При помощи цикла for вывести на экран числа от 15 до 1. (использовать декремент)
          */
         System.out.println("\n");
+        int number = 0;
         System.out.println("№2");
-        for (number =15 ;number >=1; number--){
+        for (number = 15 ;number >= 1; number--){
             System.out.print(number + " ");
         }
 
@@ -32,14 +32,25 @@ public class HomeWorkPart2 {
         System.out.println("№3");
         System.out.println("print number >0");
         Scanner scanner = new Scanner(System.in);
+
+//        int N = scanner.nextInt() +1;
+//        int summ = 0;
+//        while (N-- != 0){
+//            summ += N;
+//        }
+//        System.out.println("Number" + summ);
+
         int N = scanner.nextInt();
-        number = 1;
         int summ = 0;
-        while (number <= N){
-            summ += number;
-            number++;
+        do {
+            summ += N;
+        }
+        while (N-- != 1); {
+            summ += N;
         }
         System.out.println("Number" + summ);
+
+
 
         /*
         Напишите программу, которая будет выводить на экран такую последовательность: 7 14 21 28 35 42
@@ -48,7 +59,11 @@ public class HomeWorkPart2 {
         System.out.println("№4");
         number =7;
         while (number < 100){
-            System.out.print(number + " ");
+            if(number == 98){
+                System.out.print(number);
+                break;
+            }
+            System.out.print(number + ",");
             number += 7;
         }
 

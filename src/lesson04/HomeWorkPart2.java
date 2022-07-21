@@ -26,13 +26,22 @@ public class HomeWorkPart2 {
 
         }
         int[] arrayOne = new int[arrayLenght];
-        int[] arrayTwo = new int[arrayLenght];
-        int ii = 0;
-        for (int i = 0; i < arrayOne.length; i++) {
+        int[] arrayTwo;
+        int colMassivaTwo = 0;
+        int i = 0;
+
+        for ( ; i < arrayOne.length; i++) {
             arrayOne[i] = (int) (Math.random() * 50);
-            if(arrayOne[i] %2 == 0){
-                arrayTwo[ii] = arrayOne[i];
-                ii++;
+            if(arrayOne[i] %2 == 0) {
+                colMassivaTwo++;
+            }
+        }
+        arrayTwo = new int[colMassivaTwo];
+        colMassivaTwo = 0;
+        for (i = 0; i < arrayOne.length; i++) {
+            if(arrayOne[i] %2 == 0) {
+                arrayTwo[colMassivaTwo] = arrayOne[i];
+                colMassivaTwo++;
             }
         }
         System.out.println(Arrays.toString(arrayOne));
@@ -45,9 +54,9 @@ public class HomeWorkPart2 {
         System.out.println("№2");
         int[] arrayThree = new int[] {2,4,3,5,6,8,7,9,10,12};
         System.out.println(Arrays.toString(arrayThree));
-        for (int i = 0; i < arrayThree.length; i++) {
-            if (i %2 != 0) {
-                arrayThree[i] = 0;
+        for (int s = 0; s < arrayThree.length; s++) {
+            if (s %2 != 0) {
+                arrayThree[s] = 0;
             }
         }
         System.out.println(Arrays.toString(arrayThree));
@@ -65,6 +74,21 @@ public class HomeWorkPart2 {
         Реализуйте алгоритм сортировки пузырьком, проставляя комментарии на каждом шаге.
          */
         System.out.println("№4");
-
+        int[] arrayFive = new int[] {8, 3, 2, 7, 1, 9, 5};
+        System.out.println(Arrays.toString(arrayFive));
+        boolean sotrted = false;
+        int peremen;
+        while (!sotrted) {  // цикл будет работать пока не будет отсортировано все
+            sotrted  = true;
+            for (int in = 0; in < arrayFive.length-1; in++ ) { // цикл проходим до предпоследнего индекса,тк внутри в условии последнее значение массива будет в последнем индексе
+                if(arrayFive[in] > arrayFive[in+1]) {  // одно условие, сравнивается лывый элемент с правым, что бы правый элемент был, сделали индекс текущий +1
+                    peremen = arrayFive[in];   // переменная что бы сохранять левое значение, что бы потом присвоить правому
+                    arrayFive[in] = arrayFive[in + 1];  // левый элемент равен правому
+                    arrayFive[in + 1] = peremen;       // правый элемент равен левому
+                    sotrted = false; // были изменения, поэтому не все отсортировано, нужно дальше идти по циклу
+                }
+            }
+            System.out.println(Arrays.toString(arrayFive));
+        }
     }
 }

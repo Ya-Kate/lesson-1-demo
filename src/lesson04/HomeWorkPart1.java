@@ -15,8 +15,8 @@ public class HomeWorkPart1 {
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
         boolean thereIs = false;
-        int[] array = new int[] {12, 3, 22, 10, 8, 1, 0, 2, 4, 5};
-        for (int i =0; i < array.length; i++ ) {
+        int[] array = new int[] {1, 2, 3, 4, 5};
+        for (int i =0; i < array.length; i++) {
             if (number == array[i]) {
                 thereIs = true;
                 break;
@@ -36,24 +36,29 @@ public class HomeWorkPart1 {
 об этом.
          */
         System.out.println("№2");
-        int[] arrayOne = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int[] arrayTwo = new int [10];
+        int[] arrayOne = new int[] {1, 2, 3, 3, 4, 4, 4};
+        int[] arrayTwo;
         Scanner scanner1 = new Scanner(System.in);
         System.out.println("Введите число");
         int number1 = scanner1.nextInt();
-        int j =0;
-        boolean findNumber = false;
-        for (int i = 0; i < arrayOne.length; i++) {
-            if (arrayOne[i] == number1){
-                findNumber = true;
-            }
-            else {
-               arrayTwo [j]= arrayOne[i];
-                j++;
+        int colRepet = 0;
+        int j = 0;
+        int k = 0;
+        for ( ; j < arrayOne.length; j++) {
+            if (arrayOne[j] == number1){
+                colRepet++;
             }
         }
-        if (!findNumber) {
+        if (colRepet == 0) {
             System.out.println(number1 + "- такого числа нет в массиве");
+        }
+
+        arrayTwo = new int [arrayOne.length - colRepet];
+        for (j = 0; j < arrayOne.length; j++) {
+            if(arrayOne[j] != number1) {
+                arrayTwo[k] = arrayOne[j];
+                k++;
+            }
         }
         System.out.println(Arrays.toString(arrayOne));
         System.out.println(Arrays.toString(arrayTwo));
@@ -72,7 +77,8 @@ Math.random(). Пусть будет возможность создавать �
         int i = 0;
         int valueMin;
         int valueMax;
-        double medianValue = 0;
+        int sumValue = 0;
+        double medianValue;
         for ( ;i < arrayThree.length; i++ ) {
             arrayThree[i] = (int) (Math.random() *20);
         }
@@ -81,7 +87,7 @@ Math.random(). Пусть будет возможность создавать �
         valueMin = arrayThree[i];
         System.out.println(Arrays.toString(arrayThree));
         for ( ; i < arrayThree.length; i++) {
-            medianValue += arrayThree[i];
+            sumValue += arrayThree[i];
 
             if (valueMax < arrayThree[i]) {
                 valueMax = arrayThree[i];
@@ -90,7 +96,7 @@ Math.random(). Пусть будет возможность создавать �
                 valueMin = arrayThree[i];
             }
         }
-        medianValue = medianValue / arrayLength;
+        medianValue = (double) sumValue / arrayLength;
         String result = String.format("%.2f",medianValue);
         System.out.println("МАХ значение:" + valueMax);
         System.out.println("МИН значение:" + valueMin);
@@ -107,14 +113,16 @@ Math.random(). Пусть будет возможность создавать �
         int[] arrayFive = new int[] {8, 20, 122, 24, 7};
         System.out.println(Arrays.toString(arrayFour));
         System.out.println(Arrays.toString(arrayFive));
-        int medianValueOne = 0;
-        int medianValueTwo = 0;
+        int medianValueOne;
+        int medianValueTwo;
+        int sumValueOne = 0;
+        int sumValueTwo = 0;
         for (int ii =0; ii < arrayFive.length; ii++) {
-            medianValueOne += arrayFour[ii];
-            medianValueTwo += arrayFive[ii];
+            sumValueOne += arrayFour[ii];
+            sumValueTwo += arrayFive[ii];
         }
-        medianValueOne /= arrayFour.length;
-        medianValueTwo /= arrayFive.length;
+        medianValueOne = sumValueOne / arrayFour.length;
+        medianValueTwo = sumValueTwo / arrayFive.length;
         if (medianValueOne == medianValueTwo) {
             System.out.println("Средние арифметические двух массивов- равны");
         }
