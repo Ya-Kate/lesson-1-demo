@@ -12,84 +12,47 @@ public class HomeWorkPart1 {
         System.out.println("Print number month");
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
+        String season = "";
        switch (number) {
            case 1:
-               System.out.println("January");
-               break;
            case 2:
-               System.out.println("February");
+           case 12:
+               season = "Winter";
                break;
            case 3:
-               System.out.println("March");
-               break;
            case 4:
-               System.out.println("April");
-               break;
            case 5:
-               System.out.println("May");
+               season = "Spring";
                break;
            case 6:
-               System.out.println("June");
-               break;
            case 7:
-               System.out.println("July");
-               break;
            case 8:
-               System.out.println("August");
+               season = "Summer";
                break;
            case 9:
-               System.out.println("September");
-               break;
            case 10:
-               System.out.println("October");
-               break;
            case 11:
-               System.out.println("November");
+               season = "Autumn";
                break;
-           case 12:
-               System.out.println("Descember");
-               break;
+       }
+        System.out.println(season);
 
+       if(number == 1 || number == 2 || number == 12){
+           season = "Зима";
        }
-       if(number == 1){
-           System.out.println("Январь");
-       }
-        else if(number == 2){
-            System.out.println("Февраль");
+         else  if(number == 3 || number == 4 || number == 5){
+           season = "Весна";
         }
-         else  if(number == 3){
-            System.out.println("Март");
+         else  if(number == 6 || number == 7 || number == 8){
+            System.out.println("Лето");
         }
-         else  if(number == 4){
-            System.out.println("Апрель");
-        }
-         else  if(number == 5){
-            System.out.println("Май");
-        }
-         else  if(number == 6){
-            System.out.println("Июнь");
-        }
-        else if(number == 7){
-            System.out.println("Июль");
-        }
-        else if(number == 8){
-            System.out.println("Август");
-        }
-        else if(number == 9){
-            System.out.println("Сентябрь");
-        }
-        else if(number == 10){
-            System.out.println("Октябрь");
-        }
-        else if(number == 11){
-            System.out.println("Ноябрь");
-        }
-        else if(number == 12){
-            System.out.println("Декабрь");
+        else if(number == 9 || number == 10 || number == 11){
+            System.out.println("Осень");
         }
         else {
             System.out.println("No this month");
         }
+        System.out.println(season);
 
         /*
         Напишите программу, которая будет принимать на вход число (можно задать явно в коде)
@@ -126,32 +89,33 @@ public class HomeWorkPart1 {
         System.out.println("№4");
         System.out.println("Print number rainbow");
         number = scanner.nextInt();
+        String ptintCollors = "";
         switch (number){
             case 1:
-                System.out.println("Красный");
+                ptintCollors = "Красный";
                 break;
             case 2:
-                System.out.println("Оранжевый");
+                ptintCollors = "Оранжевый";
                 break;
             case 3:
-                System.out.println("Желтый");
+                ptintCollors = "Желтый";
                 break;
             case 4:
-                System.out.println("Зеленый");
+                ptintCollors = "Зеленый";
                 break;
             case 5:
-                System.out.println("Голубой");
+                ptintCollors = "Голубой";
                 break;
             case 6:
-                System.out.println("Синий");
+                ptintCollors = "Синий";
                 break;
             case 7:
-                System.out.println("Фиолетовый");
+                ptintCollors = "Фиолетовый";
                 break;
+            default:
+                System.out.println("No this rainbow");
         }
-        if(number < 1 || number > 7) {
-            System.out.println("No this rainbow");
-        }
+        System.out.println(ptintCollors);
     }
 }
 
