@@ -1,7 +1,5 @@
 package lesson05;
 
-
-
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -14,7 +12,13 @@ public class HomeWorkPart1 {
 
          */
         System.out.println("Task №1");
-        int[][][] arrayThreeOne = new int[][][] {{{1,3,5}, {2,4,6}, {11,12,13}}};
+        int[][][] arrayThreeOne = new int[][][] {
+                {
+            {1,3,5},
+            {2,4,6},
+            {11,12,13}
+                }
+        };
         System.out.println("Введите число");
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
@@ -36,7 +40,7 @@ public class HomeWorkPart1 {
 элементам значения B (Black) или W (White).
          */
         System.out.println("--------------------------------");
-        System.out.println("Task №1");
+        System.out.println("Task №2");
         String [][] chessBoard = new String[8][8];
 
         for (int i = 0; i < chessBoard.length; i++) {
@@ -48,7 +52,7 @@ public class HomeWorkPart1 {
                 else {
                     chessBoard[i][j] = "B";
                 }
-                System.out.printf( "%2s ", chessBoard[i][j]);
+                System.out.printf( "%-2s ", chessBoard[i][j]);
             }
             System.out.print("\n");
         }
