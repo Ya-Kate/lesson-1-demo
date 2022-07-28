@@ -12,7 +12,7 @@ public class HomeWorkPart2 {
 программа должна просить пользователя повторить ввод. Создайте второй массив только из четных
 элементов первого массива, если они там есть, и вывести эго на экран.
          */
-        System.out.println("№1");
+        System.out.println("№ 1");
         System.out.println("Введите длину массива больше 5 до 10");
         Scanner scanner = new Scanner(System.in);
         int arrayLenght;
@@ -51,7 +51,7 @@ public class HomeWorkPart2 {
         Создайте массив и заполните его. Выведите массив на экран в строку. Заменит каждый элемент с
 нечетным индексом на 0. Снова выведите массив на экран на отдельной строке.
          */
-        System.out.println("№2");
+        System.out.println("№ 2");
         int[] arrayThree = new int[] {2,4,3,5,6,8,7,9,10,12};
         System.out.println(Arrays.toString(arrayThree));
         for (int s = 0; s < arrayThree.length; s++) {
@@ -65,7 +65,7 @@ public class HomeWorkPart2 {
         Создайте массив строк. Заполните его произвольными именами людей. Отсортируйте массив.
 Результат выведите на консоль.
          */
-        System.out.println("№3");
+        System.out.println("№ 3");
         String[] arrayFour = new String[] {"Nina", "Alina", "Nikita", "Max", "Alex", "Kate"};
         Arrays.sort(arrayFour);
         System.out.println(Arrays.toString(arrayFour));
