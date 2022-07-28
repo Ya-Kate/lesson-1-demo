@@ -9,20 +9,26 @@ public class HomeWorkPart2 {
         Напишите программу для умножения двух матриц.
          */
         System.out.println("Task №1");
-        int [][] arrMultiplyOneTwo = new int [3][3];
-        int [][] arrOne = new int[][] {
-            {1,2,5},
-            {3,4,5},
-            {10,10,10}
+// число столбцов в первом сомножителе равно числу строк во втором
+        int [][] arrOne = new int[][]{
+                {1, 2, 5},
+                {3, 4, 5}
         };
+
         int [][] arrTwo = new int[][] {
-                {1,2,5},
-                {3,4,5},
-                {10,20,30}
+                {1,3},
+                {2,4},
+                {3,3}
+
         };
+
+        int [][] arrMultiplyOneTwo = new int [arrOne.length][arrTwo[0].length];
+
         for (int i = 0; i < arrOne.length; i++) {
-            for (int j = 0; j < arrTwo[i].length; j++) {
-                arrMultiplyOneTwo[i][j] = arrOne[i][j] * arrTwo[i][j];
+            for (int j = 0; j < arrTwo[0].length; j++) {
+                for (int d = 0; d < arrOne[0].length; d++) {
+                    arrMultiplyOneTwo[i][j] += arrOne[i][d] * arrTwo[d][j];
+                }
             }
         }
         System.out.println(Arrays.deepToString(arrOne));
@@ -49,7 +55,8 @@ public class HomeWorkPart2 {
         /*
         Создайте двумерный массив. Выведите на консоль диагонали массива.
          */
-        int [][] arrayTwo = new int[][] {
+        int [][] arrayTwo = new int[][]
+        {
             {11,12,13,14,15},
             {16,17,18,19,20},
             {21,22,23,24,25},
