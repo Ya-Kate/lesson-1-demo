@@ -10,7 +10,7 @@ public class HomeWorkPart1 {
 входит ли заданное число в массив или нет. Пусть число для поиска задается с консоли
 (класс Scanner).
          */
-        System.out.println("№1");
+        System.out.println("№ 1");
         System.out.println("Введите число");
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
@@ -35,7 +35,7 @@ public class HomeWorkPart1 {
 число задается с консоли (класс Scanner). Если такого числа нет – выведите сообщение
 об этом.
          */
-        System.out.println("№2");
+        System.out.println("№ 2");
         int[] arrayOne = new int[] {1, 2, 3, 3, 4, 4, 4};
         int[] arrayTwo;
         Scanner scanner1 = new Scanner(System.in);
@@ -69,7 +69,7 @@ public class HomeWorkPart1 {
 Math.random(). Пусть будет возможность создавать массив произвольного размера. Пусть
 размер массива вводится с консоли.
          */
-        System.out.println("№3");
+        System.out.println("№ 3");
         Scanner scanner2 = new Scanner(System.in);
         System.out.println("ВВедите длину массива");
         int arrayLength = scanner2.nextInt();
@@ -108,7 +108,7 @@ Math.random(). Пусть будет возможность создавать �
 из массивов это значение оказалось больше (либо сообщите, что их средние
 арифметические равны).
          */
-        System.out.println("№4");
+        System.out.println("№ 4");
         int[] arrayFour = new int[] {8, 20, 122, 24, 63};
         int[] arrayFive = new int[] {8, 20, 122, 24, 7};
         System.out.println(Arrays.toString(arrayFour));
