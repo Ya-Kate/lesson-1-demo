@@ -13,17 +13,14 @@ public class HomeWorkPart1 {
 Положите деньги на первые две карточки и снимите с третьей.
          */
         CreditCard clientOne = new CreditCard();
-        clientOne.name = "Ivanov S.A.";
         clientOne.numberAccount = "3hbkj65677";
         clientOne.summToAccount = 500;
 
         CreditCard clientTwo = new CreditCard();
-        clientTwo.name = "Petrov N.A.";
         clientTwo.numberAccount = "879ijnjmp";
         clientTwo.summToAccount = 300;
 
         CreditCard clientThree = new CreditCard();
-        clientThree.name = "Sidirov A.T.";
         clientThree.numberAccount = "tfgv8789";
         clientThree.summToAccount = 100;
 

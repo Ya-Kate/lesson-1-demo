@@ -6,7 +6,7 @@ public class HomeWorkPart3 {
         atmMachine.nameBank = "BSB";
         atmMachine.typeATMmachine = "OUTSide";
         atmMachine.AddMoney();
-        boolean makeGood = atmMachine.GiveMoney(290);
+        boolean makeGood = atmMachine.GiveMoney(270);
         if (makeGood) {
             System.out.println("Операция прошла успешна.");
         }

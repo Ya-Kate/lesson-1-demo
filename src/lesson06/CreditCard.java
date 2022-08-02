@@ -1,7 +1,6 @@
 package lesson06;
 
 public class CreditCard {
-    String name;
     String numberAccount;
     double summToAccount;
 
@@ -14,12 +13,12 @@ public class CreditCard {
             this.summToAccount -= numbedrOff;
         }
         else {
-            System.out.println(name + "\n снять не возможно, остаток: " + summToAccount);
+            System.out.println("снять не возможно, остаток: " + summToAccount);
         }
     }
 
     void printSummCreditCart() {
-        System.out.println(name + "\n Карточка: " + numberAccount + ", остаток: " + summToAccount);
+        System.out.println("Карточка: " + numberAccount + ", остаток: " + summToAccount);
     }
 
 }

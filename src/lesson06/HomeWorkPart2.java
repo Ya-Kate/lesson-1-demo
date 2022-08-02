@@ -60,11 +60,24 @@ class Computer {
 }
 
 class RAM {
+    RAM () {
+    }
+    RAM (String nameRam, double volueRam ) {
+        nameRAM = nameRam;
+        volumeRAM = volueRam;
+    }
     String nameRAM;
     double volumeRAM;
 }
 
 class HDD {
+    HDD () {
+    }
+    HDD (String nameHdd, double volumeHdd, String typeHdd ) {
+        nameHDD = nameHdd;
+        volumeHDD = volumeHdd;
+        typeHDD = typeHdd;
+    }
     String nameHDD;
     double volumeHDD;
     String typeHDD;
