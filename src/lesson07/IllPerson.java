@@ -6,5 +6,4 @@ public class IllPerson {
     String surNameIllPerson;
     int ageIllPerson;
     int diagnosisIllPerson;
-
 }

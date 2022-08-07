@@ -4,15 +4,18 @@ public class Phone {
     int number;
     String model;
     double weight;
+
     Phone () {
-    }
-    Phone (int numbEr, String modEl, double weIght) {
-        this (numbEr,modEl);
-        number = numbEr;
-        model = modEl;
-        weight = weIght;
 
     }
+
+    Phone (int numbEr, String modEl, double weIght) {
+        this (numbEr,modEl);
+        this.number = numbEr;
+        this.model = modEl;
+        this.weight = weIght;
+    }
+
     Phone (int num, String mod) {
         number = num;
         model = mod;
@@ -31,10 +34,9 @@ public class Phone {
     }
 
     static void sendMessage(int...numPhon) {
-    for (Object o : numPhon) {
-        System.out.println(o.toString());
+    for (int i : numPhon) {
+        System.out.println (i);
     }
     }
-
 }
 

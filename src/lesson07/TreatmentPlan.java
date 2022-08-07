@@ -1,18 +1,14 @@
 package lesson07;
+import java.util.Scanner;
 
 public class TreatmentPlan {
-    int treatmentPlanOne;
-    int treatmentPlanTwo;
-    int treatmentPlanThree;
+     int treatmentPlan;
 
-     int getTreatmentPlanSurgeon() {
-        return treatmentPlanOne = 1;
-    }
-     int getTreatmentPlanDantist() {
-        return treatmentPlanTwo = 2;
-    }
-     int getTreatmentPlanInternist() {
-        return treatmentPlanThree;
+    public int setTreatmentPlan(String surnameIll) {
+        System.out.println("Введите какой план лечения для: " + surnameIll);
+        Scanner scanner = new Scanner(System.in);
+        treatmentPlan = scanner.nextInt();
+        return treatmentPlan;
     }
 
 }
