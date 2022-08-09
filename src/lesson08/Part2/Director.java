@@ -1,4 +1,4 @@
-package lesson08;
+package lesson08.Part2;
 
 import java.util.Objects;
 
@@ -29,7 +29,7 @@ public class Director extends InfoPerson implements Employed {
 
     @Override
     public void printPosition(String position) {
-        System.out.println("Должность: " + position);
+        System.out.println("Должность: " + position + "\nОбразование: " + education);
     }
 
     public Director(String surname, String name, int salary) {
@@ -39,6 +39,6 @@ public class Director extends InfoPerson implements Employed {
     public void PrintInfoDirector() {
         System.out.println(surname + " " + name);
         printPosition("Директор");
-        System.out.println("Образование: " + education + "\nОклад: " + salary + "\n---------------------------");
+        System.out.println("\nОклад: " + salary + "\n---------------------------");
     }
 }

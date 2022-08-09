@@ -1,13 +1,8 @@
-package lesson08;
+package lesson08.Part2;
 
 public class HomeWorkPart2 {
     public static void main(String[] args) {
         /*
-        1. Написать иерархию классов «Фигуры».
-Фигура -> Треугольник -> Прямоугольник -> Круг.
-Реализовать функцию подсчета площади для каждого типа фигуры и подсчет периметра.
-Создать массив из 5 фигур.
-Вывести на экран сумму периметра всех фигур в массиве.
 2. Создать классы "Директор", "Рабочий", "Бухгалтер".
 Реализовать интерфейс с методом, который печатает название должности и
 имплементировать этот метод в созданные классы.
@@ -22,6 +17,6 @@ public class HomeWorkPart2 {
 
         Accountant accountant = new Accountant("Сидорова", "Ирина", 2000);
         accountant.yearBalans = true;
-        accountant.PrintInfoAccountant();
+        accountant.printInfoAccountant();
     }
 }

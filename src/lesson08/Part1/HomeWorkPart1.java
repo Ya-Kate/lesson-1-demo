@@ -1,4 +1,4 @@
-package lesson08;
+package lesson08.Part1;
 
 public class HomeWorkPart1 {
     public static void main(String[] args) {
@@ -8,9 +8,6 @@ public class HomeWorkPart1 {
 Реализовать функцию подсчета площади для каждого типа фигуры и подсчет периметра.
 Создать массив из 5 фигур.
 Вывести на экран сумму периметра всех фигур в массиве.
-2. Создать классы "Директор", "Рабочий", "Бухгалтер".
-Реализовать интерфейс с методом, который печатает название должности и
-имплементировать этот метод в созданные классы.
          */
         Figure triangle = new Triangle(10, 20, 30, 13);
         Figure rectangle = new Rectangle(5, 10);

@@ -1,4 +1,4 @@
-package lesson08;
+package lesson08.Part2;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package lesson08;
+package lesson08.Part2;
 
 import java.util.Objects;
 
@@ -29,16 +29,16 @@ public class Accountant extends InfoPerson implements Employed {
 
     @Override
     public void printPosition(String position) {
-        System.out.println("Должность: " + position);
+        System.out.println("Должность: " + position + "\nСдала годовой баланс: " + yearBalans);
     }
 
     public Accountant(String surname, String name, int salary) {
         super(surname, name, salary);
     }
 
-    public void PrintInfoAccountant() {
+    public void printInfoAccountant() {
         System.out.println(surname + " " + name);
         printPosition("Бухгалтер");
-        System.out.println("Сдала годовой баланс: " + yearBalans + "\nОклад: " + salary);
+        System.out.println("\nОклад: " + salary);
     }
 }

@@ -1,19 +1,44 @@
-package lesson08;
+package lesson08.Part1;
 
 import java.util.Objects;
 
-public class Trapezoid implements Figure {
+public class Trapezoid implements Figure { // класс реализующий интерфейс. имеет дополнительные свои парамтры.
     public String nameTrapezoid = "Трапеция";
     public int sideOnaUp;
     public int sideTwoDown;
     public int heightTrapezoid;
     public int sideThree;
 
+    public Trapezoid() { // конструктор по умолчанию, нужен, тк есть класс с параметрами (переменные)
+
+    }
+
+    public Trapezoid(int sideOnaUp, int sideTwoDown, int heightTrapezoid, int sideThree) { // конструктор с параметрами, инициализируются переменные данного класса
+        this.sideOnaUp = sideOnaUp;
+        this.sideTwoDown = sideTwoDown;
+        this.heightTrapezoid = heightTrapezoid;
+        this.sideThree = sideThree;
+    }
+
+    @Override
+    public void squareFigure() { // переопределяется функция родительского класса  считается и выводится площадь трапеции
+        int sSquareFig = (int) (0.5 * (sideOnaUp + sideTwoDown) * heightTrapezoid);
+        System.out.println("Площадь " + nameTrapezoid + ": " + sSquareFig);
+    }
+
+    @Override
+    public int perimeterFigure() { // переопределяется функция родительского класса  считается и возвращает int значение- периметр трапеции
+        int perimetrFig = (sideThree * 2) + sideOnaUp + sideTwoDown;
+        return perimetrFig;
+    }
+
     public void setSideThree(int sideThree) {
+
         this.sideThree = sideThree;
     }
 
     public int getSideThree() {
+
         return sideThree;
     }
 
@@ -68,28 +93,5 @@ public class Trapezoid implements Figure {
     public int getHeightTrapezoid() {
 
         return heightTrapezoid;
-    }
-
-    public Trapezoid() { // конструктор по умолчанию
-
-    }
-
-    public Trapezoid(int sideOnaUp, int sideTwoDown, int heightTrapezoid, int sideThree) { // конструктор с параметрами, инициализируются переменные данного класса
-        this.sideOnaUp = sideOnaUp;
-        this.sideTwoDown = sideTwoDown;
-        this.heightTrapezoid = heightTrapezoid;
-        this.sideThree = sideThree;
-    }
-
-    @Override
-    public void squareFigure() { // переопределяется функция родительского класса  считается и выводится площадь трапеции
-        int sSquareFig = (int) (0.5 * (sideOnaUp + sideTwoDown) * heightTrapezoid);
-        System.out.println("Площадь " + nameTrapezoid + ": " + sSquareFig);
-    }
-
-    @Override
-    public int perimeterFigure() { // переопределяется функция родительского класса  считается и возвращает int значение- периметр трапеции
-        int perimetrFig = (sideThree * 2) + sideOnaUp + sideTwoDown;
-        return perimetrFig;
     }
 }
