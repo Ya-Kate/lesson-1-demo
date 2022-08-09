@@ -1,6 +1,8 @@
 package lesson07;
 
- public class Doktors {
+import java.util.Objects;
+
+public class Doktors {
      public String specialism;
 
      public String getSpecialism() {
@@ -11,9 +13,24 @@ package lesson07;
          this.specialism = specialism;
      }
 
-     void termentMetod() {}
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Doktors doktors = (Doktors) o;
+        return Objects.equals(specialism, doktors.specialism);
+    }
 
-    void treatPerson (int treatPlan) {
+    @Override
+    public int hashCode() {
+        return Objects.hash(specialism);
+    }
+
+    public void termentMetod() {
+     }
+
+
+    public void treatPerson (int treatPlan) {
         if (treatPlan == 1) {
             Surgeon surgeon = new Surgeon();
             surgeon.termentMetod();
@@ -29,31 +46,5 @@ package lesson07;
     }
 }
 
- class Surgeon extends Doktors {
-
-     @Override
-     void termentMetod() {
-         specialism= "Хирург";
-         System.out.println("Назначить: " + specialism + "\n-Снимок" + "\n-Тугая повязка" + "\n-Обезбаливающее");
-     }
- }
-
-class Dentist extends Doktors {
-
-    @Override
-    void termentMetod() {
-        specialism = "Дантист";
-        System.out.println("Назначить: " + specialism + "\n-Снимок" + "\n-Уколоть обезбаливающее" + "\n-Вырвать или залечить");
-    }
-}
-
-class Internist extends Doktors {
-
-    @Override
-    void termentMetod() {
-        specialism = "Терапевт";
-        System.out.println("Назначить: " + specialism + "\n-Сдать анализы" + "\n-Сделать MRT" + "\n-Сделать ЭКГ" + "\n-Повторный прием");
-    }
-}
 
 
