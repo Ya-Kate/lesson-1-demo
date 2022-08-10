@@ -5,30 +5,8 @@ import java.util.Objects;
 public class Doktors {
      public String specialism;
 
-     public String getSpecialism() {
-         return specialism;
-     }
-
-     public void setSpecialism(String specialism) {
-         this.specialism = specialism;
-     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Doktors doktors = (Doktors) o;
-        return Objects.equals(specialism, doktors.specialism);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(specialism);
-    }
-
     public void termentMetod() {
      }
-
 
     public void treatPerson (int treatPlan) {
         if (treatPlan == 1) {
@@ -43,6 +21,27 @@ public class Doktors {
             Internist internist = new Internist();
             internist.termentMetod();
         }
+    }
+
+    public String getSpecialism() {
+        return specialism;
+    }
+
+    public void setSpecialism(String specialism) {
+        this.specialism = specialism;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Doktors doktors = (Doktors) o;
+        return Objects.equals(specialism, doktors.specialism);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(specialism);
     }
 }
 

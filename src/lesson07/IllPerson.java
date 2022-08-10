@@ -9,6 +9,25 @@ public class IllPerson {
     public int age;
     public int diagnosis;
 
+    public IllPerson() {
+
+    }
+
+    public IllPerson(String name, String surName, int age, int diagnosis) {
+        this.name = name;
+        this.surName = surName;
+        this.age = age;
+        this.diagnosis = diagnosis;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getDiagnosis() {
+        return diagnosis;
+    }
+
     public void setTreatmentPlan(TreatmentPlan treatmentPlan) {
         this.treatmentPlan = treatmentPlan;
     }
@@ -39,14 +58,6 @@ public class IllPerson {
 
     public String getSurName() {
         return surName;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public int getDiagnosis() {
-        return diagnosis;
     }
 
     @Override

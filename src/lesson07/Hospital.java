@@ -28,7 +28,7 @@ public class Hospital {
 
         for (int i = 0; i < sickList.length; i++) {
             System.out.println(sickList[i].surName + "\n" + sickList[i].surName);
-            System.out.println(sickList[i].age);
+            System.out.println(sickList[i].age + "years old");
             doktors.treatPerson(sickList[i].diagnosis);
             System.out.println("----------------------");
         }
