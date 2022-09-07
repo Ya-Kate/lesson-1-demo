@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class HomeWorkPart1 {
     public static void main(String[] args) {
+
         /*
          Создайте трехмерный массив из целых чисел. С помощью циклов «пройти» по всему
 массиву и увеличить каждый элемент на заданное число. Пусть число, на которое будет

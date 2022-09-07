@@ -3,6 +3,7 @@ package lesson05;
 import java.util.Arrays;
 
 public class HomeWorkPart2 {
+
     public static void main(String[] args) {
         /*
         Умножение двух матриц. Создайте два массива целых чисел размером 3х3 (две матрицы).
